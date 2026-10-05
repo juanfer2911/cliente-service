@@ -1,10 +1,10 @@
-# 🚀 Cliente Service — Microservicio Spring Boot 4.x
+#  Cliente Service — Microservicio Spring Boot 4.x
 
 Microservicio backend desarrollado en Java 21 y Spring Boot 4.1.1 para la gestión de clientes y regiones. Este repositorio consolida el desarrollo completo realizado a lo largo de 5 Codelabs, cubriendo desde el diseño arquitectónico hasta la suite integral de pruebas con bases de datos en contenedores.
 
 ---
 
-## 📚 Módulos y Codelabs Desarrollados
+##  Módulos y Codelabs Desarrollados
 
 ### 🔹 Codelab 01 — Arquitectura Hexagonal / Multicapa & Entidades
 * Configuración del entorno de desarrollo con Java 21 y Spring Boot 4.1.1.
@@ -34,7 +34,7 @@ Microservicio backend desarrollado en Java 21 y Spring Boot 4.1.1 para la gesti�
 
 ---
 
-## 🛠️ Tecnologías y Herramientas
+## Tecnologías y Herramientas
 
 * **Lenguaje & Framework:** Java 21 | Spring Boot 4.1.1
 * **Persistencia:** Spring Data JPA | Hibernate 7.x | PostgreSQL 16 | H2 Database
@@ -44,7 +44,7 @@ Microservicio backend desarrollado en Java 21 y Spring Boot 4.1.1 para la gesti�
 
 ---
 
-## 🧪 Ejecución de Pruebas
+## Ejecución de Pruebas
 
 ### Requisitos
 * Docker Desktop en ejecución (necesario para los tests E2E con Testcontainers).
