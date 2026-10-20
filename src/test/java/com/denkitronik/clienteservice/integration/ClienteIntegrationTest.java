@@ -101,6 +101,16 @@ class ClienteIntegrationTest {
 
     @Test
     @Order(3)
+    @DisplayName("GET /clientes → 200 con lista de clientes")
+    void listarClientes_debeRetornar200() {
+        ResponseEntity<String> respuesta =
+                restTemplate.getForEntity(BASE + "/clientes", String.class);
+
+        assertThat(respuesta.getStatusCode()).isEqualTo(HttpStatus.OK);
+    }
+
+    @Test
+    @Order(4)
     @DisplayName("GET /clientes/page/0 → 200 devuelve página con content como lista")
     @SuppressWarnings("unchecked")
     void listarClientesPaginado_debeRetornarPaginaConLista() {
@@ -120,7 +130,7 @@ class ClienteIntegrationTest {
         // Verificamos que el campo "content" sea efectivamente una Lista
         assertThat(body.get("content")).isInstanceOf(java.util.List.class);
 
-        // Opcional: Validamos que contenga al menos el cliente creado en Order(1)
+        // Validamos que contenga al menos el cliente creado en Order(1)
         java.util.List<?> listaClientes = (java.util.List<?>) body.get("content");
         assertThat(listaClientes).isNotEmpty();
 
