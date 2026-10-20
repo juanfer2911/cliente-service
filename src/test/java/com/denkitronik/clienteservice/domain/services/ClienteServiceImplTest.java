@@ -123,4 +123,15 @@ class ClienteServiceImplTest {
                 .isInstanceOf(ClienteNotFoundException.class)
                 .hasMessageContaining("999");
     }
+
+    @Test
+    @DisplayName("findAll — debe retornar lista de clientes")
+    void findAll_debeRetornarListaDeClientes() {
+        when(clienteDao.findAll()).thenReturn(java.util.List.of(cliente, new Cliente()));
+
+        java.util.List<Cliente> resultado = clienteService.findAll();
+
+        // ❌ ROTO A PROPÓSITO PARA EL PASO 5 (debería ser 2 para pasar):
+        assertThat(resultado).hasSize(99);
+    }
 }
