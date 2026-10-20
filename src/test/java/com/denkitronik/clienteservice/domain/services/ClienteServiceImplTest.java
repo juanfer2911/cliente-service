@@ -131,7 +131,7 @@ class ClienteServiceImplTest {
 
         java.util.List<Cliente> resultado = clienteService.findAll();
 
-        // ❌ ROTO A PROPÓSITO PARA EL PASO 5 (debería ser 2 para pasar):
-        assertThat(resultado).hasSize(99);
+        // reconfigurado para que solode 2
+        assertThat(resultado).hasSize(2);
     }
 }
